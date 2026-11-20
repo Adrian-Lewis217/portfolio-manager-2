@@ -16,6 +16,8 @@ public class Jewelry extends FixedAsset{
 
     @Override
     public BigDecimal getValue() {
-        return null;
+        BigDecimal baseValue = BigDecimal.ZERO;
+        BigDecimal karatValue = BigDecimal.valueOf(karat).multiply(new BigDecimal("20000"));
+        return baseValue.add(karatValue);
     }
 }

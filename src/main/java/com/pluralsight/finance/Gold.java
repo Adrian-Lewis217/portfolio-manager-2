@@ -12,6 +12,7 @@ public class Gold extends FixedAsset{
 
     @Override
     public BigDecimal getValue() {
-        return null;
+        BigDecimal baseValue = BigDecimal.ZERO;
+        return baseValue.add(BigDecimal.valueOf(weight).multiply(new BigDecimal("1000000")));
     }
 }

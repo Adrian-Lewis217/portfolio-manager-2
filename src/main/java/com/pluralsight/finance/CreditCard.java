@@ -13,11 +13,16 @@ public class CreditCard implements Valuable{
         this.balance = balance;
     }
 
-    public void charge(BigDecimal amount){}
-    public void pay(BigDecimal amount){}
+    public void charge(BigDecimal amount){
+        balance = balance.add(amount);
+    }
+
+    public void pay(BigDecimal amount){
+        balance = balance.subtract(amount);
+    }
 
     @Override
     public BigDecimal getValue() {
-        return null;
+        return balance;
     }
 }

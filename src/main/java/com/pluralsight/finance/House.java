@@ -16,6 +16,7 @@ public class House extends FixedAsset{
 
     @Override
     public BigDecimal getValue() {
-        return null;
+        BigDecimal baseValue = BigDecimal.ZERO;
+        return baseValue.add(new BigDecimal("17000"));
     }
 }
